@@ -1,14 +1,8 @@
 import React from "react";
-import Chat from "./components/chat";
-import Auth from "./components/auth";
+import AppRoutes from "./routes/AppRoute";
 
 function App() {
-  return (
-    <>
-      {/* <Chat /> */}
-      <Auth />
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
