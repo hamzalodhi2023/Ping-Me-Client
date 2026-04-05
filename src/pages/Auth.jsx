@@ -36,7 +36,7 @@ function Auth() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-10%] top-[-5%] h-56 w-56 rounded-full bg-sky-500/20 blur-3xl" />
         <div className="absolute bottom-[-10%] right-[-5%] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.12),_transparent_35%),linear-gradient(135deg,_rgba(255,255,255,0.04),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_35%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_55%)]" />
       </div>
 
       <div className="form-div relative w-full max-w-md overflow-hidden rounded-4xl border border-white/15 bg-white/10 shadow-2xl shadow-black/40 backdrop-blur-2xl">
