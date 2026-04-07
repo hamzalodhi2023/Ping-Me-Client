@@ -3,6 +3,7 @@ import Auth from "../pages/Auth";
 import Chat from "../pages/Chat";
 import Profile from "../pages/Profile";
 import Otp from "../pages/Otp";
+import Chatcode from "../components/chatcode";
 
 function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ function AppRoutes() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/otp" element={<Otp />} />
+        <Route path="/chatcode" element={<Chatcode />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

@@ -10,7 +10,7 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 
-const Chat = () => {
+const Chatcode = () => {
   // --- Dummy Data ---
   const contactsData = [
     { id: 1, name: "John Doe", status: "Online", avatar: null },
@@ -326,4 +326,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Chatcode;
