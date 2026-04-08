@@ -21,7 +21,7 @@ function Sidebar() {
     { id: 4, name: "Emily Davis", status: "Online", avatar: null },
   ];
   return (
-    <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-screen flex-col hidden md:flex relative md:border-r-2 border-[#364153]">
+    <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-[#364153]">
       {/* Top section (fixed) */}
       <div>
         {/* Logo */}
