@@ -41,7 +41,7 @@ function ChatSubmit() {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 w-full border-t border-white/10 bg-[#364153] px-3 py-3 sm:px-4">
+    <div className="absolute bottom-0 left-0 w-full bg-[#364153] px-3 py-3 sm:px-4">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="relative flex w-full items-end gap-2 rounded-2xl bg-[#1e2939] px-2 py-2 shadow-lg sm:gap-3 sm:px-3"
@@ -57,7 +57,7 @@ function ChatSubmit() {
           </button>
 
           {showEmojiPicker && (
-            <div className="absolute bottom-12 left-0 z-20 w-[min(320px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-white/10 shadow-2xl sm:bottom-14 sm:w-[350px]">
+            <div className="absolute bottom-12 left-0 z-20 w-[min(320px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-white/10 shadow-2xl sm:bottom-14 sm:w-87.5">
               <EmojiPicker
                 onEmojiClick={handleEmojiSelect}
                 width="100%"

@@ -21,7 +21,7 @@ function Sidebar() {
     { id: 4, name: "Emily Davis", status: "Online", avatar: null },
   ];
   return (
-    <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-[#364153]">
+    <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-gray-500">
       {/* Top section (fixed) */}
       <div>
         {/* Logo */}
@@ -68,7 +68,7 @@ function Sidebar() {
         ))}
       </div>
       {/* User Profile Setting*/}
-      <div className="w-full bg-[#364153] h-16 absolute bottom-0 left-0 hidden md:flex items-center justify-between p-3">
+      <div className="w-full bg-[#364153] h-20 absolute bottom-0 left-0 hidden md:flex items-center justify-between p-3">
         <div className="flex items-center justify-between gap-2">
           <div className="relative w-fit">
             <FaUserCircle className="text-4xl text-gray-400" />
