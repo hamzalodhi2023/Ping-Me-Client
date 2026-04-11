@@ -1,5 +1,5 @@
-import ChatSide from "../components/ChatSide";
-import Sidebar from "../components/Sidebar";
+import ChatLayout from "../components/ChatLayout";
+import ChatSidebar from "../components/ChatSidebar";
 import { useParams } from "react-router-dom";
 
 function Chat() {
@@ -13,7 +13,7 @@ function Chat() {
           bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col relative md:border-r-2 border-gray-500
         `}
       >
-        <Sidebar />
+        <ChatSidebar />
       </div>
 
       {/* 🔵 Chat */}
@@ -24,7 +24,7 @@ function Chat() {
         `}
       >
         {id ? (
-          <ChatSide />
+          <ChatLayout />
         ) : (
           <div className="hidden md:flex items-center justify-center h-dvh w-full text-white">
             Select a chat 👀
@@ -32,10 +32,6 @@ function Chat() {
         )}
       </div>
     </div>
-    // <div className="w-full h-dvh bg-[#101828] block md:flex">
-    //   <Sidebar />
-    //   <ChatSide />
-    // </div>
   );
 }
 

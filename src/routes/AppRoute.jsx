@@ -1,9 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Auth from "../pages/Auth";
-import Chat from "../pages/Chat";
-import Profile from "../pages/Profile";
-import Otp from "../pages/Otp";
-import Chatcode from "../components/chatcode";
+import Auth from "../pages/AuthPage";
+import Chat from "../pages/ChatPage";
+import Profile from "../pages/ProfilePage";
+import Otp from "../pages/OtpPage";
 
 function AppRoutes() {
   return (
@@ -14,7 +13,6 @@ function AppRoutes() {
         <Route path="/chat/:id" element={<Chat />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/otp" element={<Otp />} />
-        <Route path="/chatcode" element={<Chatcode />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

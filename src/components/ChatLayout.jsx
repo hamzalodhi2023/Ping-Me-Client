@@ -1,10 +1,10 @@
 import { FaCircle, FaEllipsisV, FaUserCircle } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { RiChatNewFill } from "react-icons/ri";
-import Chat from "./Chat";
-import ChatSubmit from "./ChatSubmit";
+import ChatMessages from "./ChatMessages";
+import ChatInput from "./ChatInput";
 
-function ChatSide() {
+function ChatLayout() {
   return (
     <>
       {/* <div className="relative h-dvh bg-[#1e2939] w-full lg:w-[70%] xl:w-[80%] flex flex-col text-white"> */}
@@ -25,12 +25,12 @@ function ChatSide() {
         <FaEllipsisV className="text-white text-xl cursor-pointer" />
       </div>
       {/* Chat Messages */}
-      <Chat />
+      <ChatMessages />
       {/* Chat Submit input */}
-      <ChatSubmit />
+      <ChatInput />
       {/* </div> */}
     </>
   );
 }
 
-export default ChatSide;
+export default ChatLayout;

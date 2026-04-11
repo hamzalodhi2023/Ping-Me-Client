@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { FaPaperPlane, FaSmile } from "react-icons/fa";
 import EmojiPicker from "emoji-picker-react";
 
-function ChatSubmit() {
+function ChatInput() {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const pickerRef = useRef(null);
   const { register, handleSubmit, reset, setValue, watch } = useForm({
@@ -93,4 +93,4 @@ function ChatSubmit() {
   );
 }
 
-export default ChatSubmit;
+export default ChatInput;

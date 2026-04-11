@@ -13,7 +13,7 @@ import {
 import { IoMdSettings } from "react-icons/io";
 import { useState } from "react";
 
-function Sidebar() {
+function ChatSidebar() {
   const navigate = useNavigate();
   const [selectedContactId, setSelectedContactId] = useState(1);
   const contactsData = [
@@ -87,4 +87,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default ChatSidebar;
