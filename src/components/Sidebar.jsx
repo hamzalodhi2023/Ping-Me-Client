@@ -1,4 +1,5 @@
 import { RiChatNewFill } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 import {
   FaSearch,
   FaUserCircle,
@@ -13,6 +14,7 @@ import { IoMdSettings } from "react-icons/io";
 import { useState } from "react";
 
 function Sidebar() {
+  const navigate = useNavigate();
   const [selectedContactId, setSelectedContactId] = useState(1);
   const contactsData = [
     { id: 1, name: "John Doe", status: "Online", avatar: null },
@@ -21,7 +23,8 @@ function Sidebar() {
     { id: 4, name: "Emily Davis", status: "Online", avatar: null },
   ];
   return (
-    <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-gray-500">
+    <>
+      {/* <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-gray-500"> */}
       {/* Top section (fixed) */}
       <div>
         {/* Logo */}
@@ -54,7 +57,8 @@ function Sidebar() {
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className="w-full flex items-center p-3 cursor-pointer transition duration-200 hover:bg-gray-700/50"
+            onClick={() => navigate(`/chat/${i}`)}
+            className="w-full flex items-center p-3 transition select-none duration-150 md:cursor-pointer active:bg-gray-700/50 md:hover:bg-gray-700/50"
           >
             <div className="relative">
               <FaUserCircle className="text-4xl text-gray-400" />
@@ -78,7 +82,8 @@ function Sidebar() {
         </div>
         <IoMdSettings className="text-white text-2xl" />
       </div>
-    </div>
+      {/* </div> */}
+    </>
   );
 }
 
