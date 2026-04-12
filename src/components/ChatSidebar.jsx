@@ -12,9 +12,11 @@ import {
 } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { useState } from "react";
+import NewChatInput from "./NewChatInput";
 
 function ChatSidebar() {
   const navigate = useNavigate();
+  const [showNewChatDialog, setShowNewChatDialog] = useState(false);
   const [selectedContactId, setSelectedContactId] = useState(1);
   const contactsData = [
     { id: 1, name: "John Doe", status: "Online", avatar: null },
@@ -24,8 +26,9 @@ function ChatSidebar() {
   ];
   return (
     <>
-      {/* <div className="bg-[#1e2939] w-full md:w-[40%] lg:w-[30%] xl:w-[20%] h-dvh flex-col hidden md:flex relative md:border-r-2 border-gray-500"> */}
-      {/* Top section (fixed) */}
+      {showNewChatDialog && (
+        <NewChatInput onClose={() => setShowNewChatDialog(false)} />
+      )}
       <div>
         {/* Logo */}
         <div className="w-full flex items-center justify-between p-3">
@@ -35,7 +38,10 @@ function ChatSidebar() {
               <FaUserCircle className="text-4xl text-gray-400" />
               <FaCircle className="absolute bottom-0 right-0 text-xs bg-gray-800 rounded-full text-green-500" />
             </div>
-            <RiChatNewFill className="text-white text-3xl" />
+            <RiChatNewFill
+              onClick={() => setShowNewChatDialog(true)}
+              className="text-white text-3xl"
+            />
           </div>
         </div>
 
@@ -82,7 +88,6 @@ function ChatSidebar() {
         </div>
         <IoMdSettings className="text-white text-2xl" />
       </div>
-      {/* </div> */}
     </>
   );
 }
