@@ -34,7 +34,10 @@ function ChatSidebar() {
         <div className="w-full flex items-center justify-between p-3">
           <img src="./logotxt.png" alt="logo" className="w-28" />
           <div className="flex items-center justify-center gap-3 ">
-            <div className="relative w-fit block md:hidden">
+            <div
+              onClick={() => navigate("/profile")}
+              className="relative w-fit block md:hidden"
+            >
               <FaUserCircle className="text-4xl text-gray-400" />
               <FaCircle className="absolute bottom-0 right-0 text-xs bg-gray-800 rounded-full text-green-500" />
             </div>
@@ -86,7 +89,10 @@ function ChatSidebar() {
           </div>
           <p className="text-white font-bold">Hamza Khan Lodhi</p>
         </div>
-        <IoMdSettings className="text-white text-2xl" />
+        <IoMdSettings
+          onClick={() => navigate("/profile")}
+          className="text-white text-2xl"
+        />
       </div>
     </>
   );
