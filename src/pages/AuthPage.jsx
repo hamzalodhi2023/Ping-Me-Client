@@ -32,7 +32,7 @@ function Auth() {
     "w-full rounded-2xl border border-white/10 bg-white/8 py-3 pl-11 pr-4 text-sm text-white shadow-inner shadow-black/10 outline-none backdrop-blur-md transition duration-200 placeholder:text-slate-400 focus:border-sky-400/70 focus:bg-white/12 focus:ring-4 focus:ring-sky-400/10";
 
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#07111f] px-4 py-8 text-white">
+    <div className="relative flex min-h-dvh w-full items-center justify-center overflow-hidden bg-[#07111f] px-4 py-8 text-white">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[-10%] top-[-5%] h-56 w-56 rounded-full bg-sky-500/20 blur-3xl" />
         <div className="absolute bottom-[-10%] right-[-5%] h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
