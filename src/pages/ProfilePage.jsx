@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { FaUserCircle, FaCircle } from "react-icons/fa";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosAdd } from "react-icons/io";
+import {
+  IoIosArrowBack,
+  IoMdNotificationsOutline,
+  IoIosAdd,
+} from "react-icons/io";
 import { LuUserRound } from "react-icons/lu";
 import { TfiEmail } from "react-icons/tfi";
 import { CiLock } from "react-icons/ci";
 import { FaChevronRight } from "react-icons/fa6";
-import { IoMdNotificationsOutline } from "react-icons/io";
 function Profile() {
+  const [notification, setNotification] = useState(false);
   return (
     <div className="flex min-h-dvh w-full flex-col items-center justify-start gap-1 bg-[#101828]">
       <div className="flex w-full items-center justify-start gap-2 border-b-[0.5px] border-[#949ca8] bg-[#1e2939] p-3 text-white">
@@ -42,6 +46,7 @@ function Profile() {
       {/* Section 2 */}
       <div className="mx-auto mt-4 flex w-[calc(100%-50px)] flex-col items-start justify-center rounded-2xl md:w-[60%]">
         <h2 className="pb-2 pl-2 text-[#4b5563]">Account</h2>
+        {/* Name */}
         <div className="flex w-full flex-col items-center justify-center rounded-t-[14px] bg-[#1e2939]">
           <div className="flex w-full items-center justify-start gap-2 p-3">
             <LuUserRound className="h-10 w-10 rounded-[9px] bg-[#2563eb26] p-2 text-[#3b82f6]" />
@@ -51,6 +56,7 @@ function Profile() {
             </div>
           </div>
         </div>
+        {/* Email */}
         <div className="flex w-full flex-col items-center justify-center bg-[#1e2939]">
           <div className="flex w-full items-center justify-start gap-2 p-3">
             <TfiEmail className="h-10 w-10 rounded-[9px] bg-[#10b98126] p-2 text-[#10b981]" />
@@ -60,6 +66,7 @@ function Profile() {
             </div>
           </div>
         </div>
+        {/* Password */}
         <div className="flex w-full items-center justify-between bg-[#1e2939]">
           <div className="flex w-full items-center justify-start gap-2 p-3">
             <CiLock className="h-10 w-10 rounded-[9px] bg-[#f59e0b26] p-2 text-[#f59e0b]" />
@@ -70,16 +77,21 @@ function Profile() {
           </div>
           <FaChevronRight className="mr-3 text-xl text-[#4b5563]" />
         </div>
+        {/* Notification row — toggle */}
         <div className="flex w-full items-center justify-between rounded-b-[14px] bg-[#1e2939]">
-          <div className="flex w-full items-center justify-start gap-2 p-3">
+          <div className="flex items-center justify-start gap-2 p-3">
             <IoMdNotificationsOutline className="h-10 w-10 rounded-[9px] bg-[#f59e0b26] p-2 text-[#f59e0b]" />
-            <div>
-              <p className="text-[#e5e7eb]">Notification</p>
-            </div>
+            <p className="text-[#e5e7eb]">Notification</p>
           </div>
-          <form className="flex items-center justify-center">
-            <input type="checkbox" name="" id="" className="mr-3" />
-          </form>
+          {/* Toggle Button */}
+          <div
+            onClick={() => setNotification((prev) => !prev)}
+            className={`mr-3 flex h-6 w-11 cursor-pointer items-center rounded-full transition-colors duration-300 ${notification ? "bg-blue-600" : "bg-gray-600"}`}
+          >
+            <div
+              className={`h-4 w-4 rounded-full bg-white transition-all duration-300 ${notification ? "translate-x-6" : "translate-x-1"}`}
+            />
+          </div>
         </div>
       </div>
     </div>
